@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 .menu {
     height: 100vh;
     width: 200px;
-       display: flex;
+    display: flex;
     flex-direction: column;
     padding-top: 100px;
     padding-left: 10px;
@@ -15,11 +15,12 @@
     align-items: left;
     position: fixed;
     top: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
-    border: 1px solid  rgba(0,0,0,0.1);
-  }
-  body {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body {
     font-family: Roboto, sans-serif;
     color: rgb(59, 59, 59);
 
@@ -29,9 +30,9 @@
     overflow-x: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  
-  footer {
+}
+
+footer {
     height: 70px;
     width: 100vw;
 
@@ -42,7 +43,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    }
+}
 
 .content {
     padding-left: 220px;
@@ -50,25 +51,47 @@
     flex-direction: column;
     align-items: center;
 }
+
 .card {
-border: 1px solid  rgba(0,0,0,0.1);
-margin: 80px;
-padding: 10px;
-width: 400px;
-height: 600px;
-background-color: rgb(230, 230, 230);
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(230, 230, 230);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
 }
+
+.head {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+.icon {
+    width: 24px;
+    margin-right: 8px;
+}
+.icon:hover {
+    cursor: pointer;
+    width: 48px;
+}
+
+.near {
+    padding-top: 16px;
+    display: flex;
+
+}
+
 .author {
     display: flex;
-  justify-content: left;
-  align-items: center;
-  padding-bottom: 10px;
-
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 10px;
 }
-
-
 
 .button {
     transition-duration: 0.4s;
@@ -76,32 +99,33 @@ font-size: 24px;
     border-radius: 4px;
     padding-left: 10px;
     padding-right: 10px;
+}
 
-  }
-  
-  .button:hover {
+.button:hover {
     background-color: rgb(70, 70, 70);
     color: white;
     cursor: pointer;
-  }
-  
-  .input {
-    border-radius: 4px;
-height: 32px;
 }
+
+.input {
+    border-radius: 4px;
+    height: 32px;
+}
+
 .round {
     width: 50px;
     height: 50px;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
-    
-    }
+    display: flex;
+    flex-direction: left;
+}
 
-    .imagePost {
-        width: 380px;
-       
-    }
+.imagePost {
+    width: 380px;
+}
+
 .name {
     font-size: 32px;
     padding-left: 10px;
@@ -109,7 +133,8 @@ height: 32px;
 
 .heart {
     width: 40px;
-    }
-    .heart:hover {
-        cursor: pointer;;
-        }
+}
+
+.heart:hover {
+    cursor: pointer;
+}
