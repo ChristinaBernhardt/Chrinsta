@@ -1,4 +1,4 @@
-let posts = [ 
+let posts = [
     {
         'authorImg': '/img/dog2.jpg',
         "authorName": 'Diddy Dackel',
@@ -16,17 +16,20 @@ let posts = [
         "authorName": 'Willi Waschbär',
         "image": '/img/sea.jpg',
         "comments": []
-    },    {
+    },
+    {
         'authorImg': '/img/owl.jpg',
         "authorName": 'Eule Beule',
         "image": '/img/job.jpg',
         "comments": []
     },
-   ];
+];
 
-function render(){
+function render() {
+    // loadFromLocalStorage();
     let content = document.getElementById('content');
     content.innerHTML = '';
+    // loadFromLocalStorage();
 
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
@@ -47,18 +50,40 @@ function render(){
             <input class="input" id="input${i}"><button class="button" onclick="addComment(${i})">Senden</button>
             </div>
         `;
-
-   
+save()
+loadFromLocalStorage();
     }
 }
-
+// Hinzufügen neuer Kommentare
 function addComment(index) {
     let input = document.getElementById(`input${index}`);
     posts[index]['comments'].push(input.value);
     render();
+    save();
     input.value = '';
 }
-function like(index){
-    document.getElementById(`heart${index}`).src="/img/herzrot.png";
+
+// Speichern neuer Kommentare im Local Storage
+// function save(){
+//     let postsAsText = JSON.stringify(`input${index}`);
+//     localStorage.setItem('titles', postsAsText);
+//       }
+
+function save() {
+    let postsAsText = JSON.stringify(posts);
+    localStorage.setItem('posts', postsAsText);
+}
+
+function loadFromLocalStorage() {
+    let postsAsText = localStorage.getItem('posts');
+
+    if (postsAsText) {
+        posts = JSON.parse(postsAsText);
+    }
+}
+
+// Funktion like
+function like(index) {
+    document.getElementById(`heart${index}`).src = "/img/herzrot.png";
 
 }
