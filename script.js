@@ -40,7 +40,7 @@ function render(){
             <img class="imagePost" src="${post['image']}">
             <div>
     
-            <img onclick="like()" class="heart" id="heart" src="/img/herz.png"> 
+            <img onclick="like(${i})" class="heart" id="heart${i}" src="/img/herz.png"> 
             </div>
 
             <div>${post['comments']}</div>
@@ -58,6 +58,7 @@ function addComment(index) {
     render();
     input.value = '';
 }
-function like(){
-    getElementById('heart').innerHTML=`src="/img/herzrot.png"`;
+function like(index){
+    document.getElementById(`heart${index}`).src="/img/herzrot.png";
+
 }
